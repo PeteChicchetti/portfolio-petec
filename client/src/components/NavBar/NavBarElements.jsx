@@ -83,6 +83,11 @@ export const NavLinks = styled(LinkR)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+
+    &:hover {
+        color: #15cdfc;
+        transition: 0.2s ease-in-out;
+    }
 `;
 
 export const NavBtn = styled.nav`
