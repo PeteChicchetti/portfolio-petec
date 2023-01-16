@@ -18,26 +18,26 @@ const NavBar = ({ toggle }) => {
     <>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/" id="nav-link"><span id="fanIcon"><GiComputerFan/></span> Technigram</NavLogo>
+            <NavLogo to="/" id="nav-link">Pete Chicchetti</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks to="/" id="nav-link">News</NavLinks>
+                <NavLinks to="/" id="nav-link">About Me</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/builds" id="nav-link">Builds</NavLinks>
+                <NavLinks to="/builds" id="nav-link">Contact</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/discussions" id="nav-link">Discussions</NavLinks>
+                <NavLinks to="/discussions" id="nav-link">Portfolio</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/signup" id="nav-link" style={{ display: 'none' }}>Sign Up</NavLinks>
               </NavItem>
             </NavMenu> 
             <NavBtn>
-              <NavBtnLink  id="nav-link">Sign Out</NavBtnLink>
+              <NavBtnLink  id="nav-link">Resume</NavBtnLink>
             </NavBtn>
           </NavbarContainer>  
         </Nav>
