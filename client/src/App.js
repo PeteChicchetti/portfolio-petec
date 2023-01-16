@@ -14,10 +14,10 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 
 /// IMPORT COMPONENTS ///
-import Navbar from './components/NavBar';
-import MobileMenu from './components/MobileMenu';
+import NavBar from './components/NavBar/NavBar';
+import MobileMenu from './components/MobileMenu/MobileMenu';
 
-import './reset.css';
+
 import './App.css';
 
 const httpLink = createHttpLink({
@@ -42,7 +42,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <MobileMenu isOpen={isOpen} toggle={toggle}/>
-        <Navbar toggle={toggle} />
+        <NavBar toggle={toggle} />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/signup' element={<Signup />} />

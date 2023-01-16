@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaBars} from 'react-icons/fa';
 import { GiComputerFan } from 'react-icons/gi';
 import { 
@@ -11,10 +11,9 @@ import {
   NavLinks,  
   NavBtn, 
   NavBtnLink 
-} from './NavbarElements'
+} from './NavBarElements'
 
-const Navbar = ({ toggle }) => {
-  const [isSignedIn, setIsSignedIn] = useState(false)
+const NavBar = ({ toggle }) => {
   return (
     <>
         <Nav>
@@ -33,14 +32,12 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks to="/discussions" id="nav-link">Discussions</NavLinks>
               </NavItem>
-              {Auth.loggedIn() ? <NavItem>
+              <NavItem>
                 <NavLinks to="/signup" id="nav-link" style={{ display: 'none' }}>Sign Up</NavLinks>
-              </NavItem> : <NavItem>
-                <NavLinks to="/signup" id="nav-link">Sign Up</NavLinks>
-              </NavItem> }
+              </NavItem>
             </NavMenu> 
             <NavBtn>
-              {Auth.loggedIn() ? <NavBtnLink  id="nav-link" onClick={Auth.logout}>Sign Out</NavBtnLink> : <NavBtnLink onClick={() => setIsSignedIn(!isSignedIn)} to="/signin">Sign In</NavBtnLink>}
+              <NavBtnLink  id="nav-link">Sign Out</NavBtnLink>
             </NavBtn>
           </NavbarContainer>  
         </Nav>
@@ -48,4 +45,4 @@ const Navbar = ({ toggle }) => {
   )
 }
 
-export default Navbar;
+export default NavBar;
