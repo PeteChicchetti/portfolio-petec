@@ -15,7 +15,7 @@ import Login from './pages/Login';
 
 /// IMPORT COMPONENTS ///
 
-
+import './reset.css';
 import './App.css';
 
 const httpLink = createHttpLink({
