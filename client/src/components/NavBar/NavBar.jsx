@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaBars} from 'react-icons/fa';
-import { GiComputerFan } from 'react-icons/gi';
 import { 
   Nav,
   NavbarContainer,

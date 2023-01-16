@@ -29,6 +29,7 @@ export const Icon = styled.div`
     font-size: 2rem;
     cursor: pointer;
     outline: none;
+    padding-top: 8px;
 `;
 
 export const MobileWrapper = styled.div`
