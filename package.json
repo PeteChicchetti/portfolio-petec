@@ -1,7 +1,7 @@
 {
-  "name": "mern-boiler",
+  "name": "pete-chicchetti-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a work portfolio designed and developed by Pete Chicchetti",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
