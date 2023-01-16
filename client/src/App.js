@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -14,6 +14,8 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 
 /// IMPORT COMPONENTS ///
+import Navbar from './components/NavBar';
+import MobileMenu from './components/MobileMenu';
 
 import './reset.css';
 import './App.css';
@@ -30,9 +32,17 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <ApolloProvider client={client}>
       <Router>
+        <MobileMenu isOpen={isOpen} toggle={toggle}/>
+        <Navbar toggle={toggle} />
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/signup' element={<Signup />} />
